@@ -1,0 +1,7 @@
+The idea of this compilation of projects ( some simple, and some not that simple) is to gather in a single repo a collection of backend related tasks which, IMO, are non-negotiable as a backend dev.
+
+This came as a realization that tutorials and so on are either not-to-the-point, or are way TOO simple to the point that are not useful in a real life scenario. example of this can be found at at [WHAT THIS IS NOT] (https://github.com/E-nkv/backend-dev-projects/abc)
+
+For the sake of simplicity, the code in each module is meant to handle the topic at hand: for example, in an http server I deliberately use some "bad practices" like using global variables instead of using configurable env vars. This allows to just focus on the actual thing (locality of behaviour) over a codebase with N packages and functions, making the code imposible to read at a glance. Again, the idea is to have a quick reference for each topic, not to over-complicate stuff.
+
+I try to stick as much as possible with go's stdlib for most stuff, except for some cases where i might use chi / gorm / external libs. For example, method based routing to the same endpoint becomes a pain using the stdlib (using a switch to the r.Method, really ugly), thats why (mainly) we use chi. As for gorm, its not absolutely required, though it helps a lot with boilerplate sql code, readability and type safety. Hhowever, we should always keep an eye on possibly non-performant queries, due to the overhead of orms. so, for super complex or possibly slow queries, we write the sql ourselves.
