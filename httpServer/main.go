@@ -1,32 +1,26 @@
 package main
 
 import (
-	"database/sql"
 	"log"
+	"net/http"
+	"os"
+
+	"github.com/E-nkv/backend-dev-projects/httpServer/api"
+	"github.com/E-nkv/backend-dev-projects/httpServer/service"
 
 	"github.com/go-chi/chi/v5"
 )
 
-var port = ":8080"
+var addr = "localhost:8080"
 
-type App struct {
-	//keep here all required dependencies, instead of having them globally.
-	DB     *sql.DB
-	Logger *log.Logger
-}
-
-func (app *App) mount() {
-	//all the handlers here
-
-}
 func main() {
 	r := chi.NewRouter()
-	app := &App{
-		DB:     nil,
-		Logger: nil,
+	app := &api.App{
+		Service: &service.InMemoryService{},
+		Log:     log.New(os.Stdout, "|| ", log.Ldate|log.Ltime|log.Lmsgprefix),
 	}
-	app.mount()
-
-	//if there's no need to use some global middleware on the mux, we can directly use http's package defaultMux (passing nil)
+	app.Mount(r)
+	app.Log.Println("running the server at ", addr)
+	log.Fatal(http.ListenAndServe(addr, r))
 
 }
