@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/E-nkv/backend-dev-projects/httpServer/api"
-	"github.com/E-nkv/backend-dev-projects/httpServer/service"
+	"github.com/E-nkv/backend-dev-projects/restAPI/api"
+	"github.com/E-nkv/backend-dev-projects/restAPI/service"
 
 	"github.com/go-chi/chi/v5"
 )
