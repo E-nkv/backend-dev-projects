@@ -1,6 +1,6 @@
 package service
 
-import "github.com/E-nkv/backend-dev-projects/httpServer/types"
+import "github.com/E-nkv/backend-dev-projects/restAPI/types"
 
 type Service interface {
 	GetUsers() ([]types.User, error)

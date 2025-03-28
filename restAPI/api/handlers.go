@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/E-nkv/backend-dev-projects/httpServer/errs"
-	"github.com/E-nkv/backend-dev-projects/httpServer/types"
+	"github.com/E-nkv/backend-dev-projects/restAPI/errs"
+	"github.com/E-nkv/backend-dev-projects/restAPI/types"
 )
 
 //option 1 is to have all the handlers directly in api.go (this becomes messy once there are a lot of handlers)

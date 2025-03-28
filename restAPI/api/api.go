@@ -3,7 +3,7 @@ package api
 import (
 	"log"
 
-	"github.com/E-nkv/backend-dev-projects/httpServer/service"
+	"github.com/E-nkv/backend-dev-projects/restAPI/service"
 	"github.com/go-chi/chi/v5"
 )
 

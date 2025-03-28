@@ -1,4 +1,4 @@
-Explanation of httpServer:
+Explanation of restAPI:
 
 main.go's only purpose is to get env vars (in this case, they are global), setup dependencies (create an instance of App), mount the multiplexer, and run the server. NOTHING ELSE.
 

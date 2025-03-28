@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/E-nkv/backend-dev-projects/httpServer/errs"
-	"github.com/E-nkv/backend-dev-projects/httpServer/types"
+	"github.com/E-nkv/backend-dev-projects/restAPI/errs"
+	"github.com/E-nkv/backend-dev-projects/restAPI/types"
 )
 
 type InMemoryService struct {
