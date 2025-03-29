@@ -14,10 +14,12 @@ import (
 var addr = "localhost:8080"
 
 func main() {
+	l := log.New(os.Stdout, "|| ", log.Ldate|log.Ltime|log.Lmsgprefix)
+	l.Println("welcome to restAPI")
 	r := chi.NewRouter()
 	app := &api.App{
 		Service: &service.InMemoryService{},
-		Log:     log.New(os.Stdout, "|| ", log.Ldate|log.Ltime|log.Lmsgprefix),
+		Log:     l,
 	}
 	app.Mount(r)
 	app.Log.Println("running the server at ", addr)

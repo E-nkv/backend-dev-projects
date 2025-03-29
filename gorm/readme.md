@@ -1,0 +1,1 @@
+The absolute basics of gorm usage. kept it simple: more advanced stuff on future projects

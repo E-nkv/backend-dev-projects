@@ -1,6 +1,6 @@
 The idea of this compilation of projects ( some simple, and some not that simple) is to gather in a single repo a collection of backend related tasks which, IMO, are non-negotiable as a backend dev.
 
-This came as a realization that tutorials and so on are either not-to-the-point, or are way TOO simple to the point that are not useful in a real life scenario. example of this can be found at at [WHAT THIS IS NOT] (https://github.com/E-nkv/backend-dev-projects/tree/master/whatThisIsNot)
+This came as a realization that tutorials and so on are either not-to-the-point, or are way TOO simple to the point that are not useful in a real life scenario. example of this can be found at at (https://github.com/E-nkv/backend-dev-projects/tree/master/whatThisIsNot)
 
 For the sake of simplicity, the code in each module is meant to handle the topic at hand: for example, in an http server I deliberately use some "bad practices" like using global variables instead of using configurable env vars. This allows to just focus on the actual thing (locality of behaviour) over a codebase with N packages and functions, making the code imposible to read at a glance. Again, the idea is to have a quick reference for each topic, not to over-complicate stuff.
 
